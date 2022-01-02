@@ -21,3 +21,13 @@ def test_compound():
 def test_simple_uoc():
     assert is_unlocked(["COMP1511", "COMP1521", "COMP1531", "COMP2521"], "COMP4161") == True
     assert is_unlocked(["COMP1511", "COMP1521"], "COMP4161") == False
+
+def test_hard_uoc():
+    assert is_unlocked(["COMP6441", "COMP6443", "COMP1511", "COMP6447"], "COMP9302") == True
+    assert is_unlocked(["COMP6841", "COMP6443", "COMP1511", "COMP6449"], "COMP9302") == False
+
+test_empty()
+test_single()
+test_compound()
+test_simple_uoc()
+test_hard_uoc()
